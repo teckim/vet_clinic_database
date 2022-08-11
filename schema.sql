@@ -23,6 +23,25 @@ CREATE TABLE species (
     PRIMARY KEY(id)
 );
 
+CREATE TABLE vets (
+    id INTEGER GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100),
+    age INTEGER,
+    date_of_graduation DATE,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE specializations (
+    vet_id INTEGER,
+    species_id INTEGER
+);
+
+CREATE TABLE visits (
+    vet_id INTEGER,
+    animal_id INTEGER,
+    date DATE
+);
+
 ALTER TABLE
     animals DROP COLUMN species;
 
@@ -45,3 +64,13 @@ ALTER TABLE
     animals
 ADD
     FOREIGN KEY (owner_id) REFERENCES owners (id);
+
+ALTER TABLE
+    specializations
+ADD FOREIGN KEY (vet_id) REFERENCES vets (id),
+ADD FOREIGN KEY (species_id) REFERENCES species (id);
+
+ALTER TABLE
+    visits
+ADD FOREIGN KEY (vet_id) REFERENCES vets (id),
+ADD FOREIGN KEY (animal_id) REFERENCES animals (id);

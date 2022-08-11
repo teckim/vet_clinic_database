@@ -166,3 +166,62 @@ SET
   )
 WHERE
   name IN ('Angemon', 'Boarmon');
+
+-- Vets
+INSERT INTO
+  vets (name, age, date_of_graduation)
+VALUES
+  ('William Tatcher', 45, '2000-04-23'),
+  ('Maisy Smith', 26, '2019-01-17'),
+  ('Stephanie Mendez', 64, '1981-05-04'),
+  ('Jack Harkness', 38, '2008-06-08');
+
+INSERT INTO
+  specializations
+VALUES
+  (1, 1),
+  (3, 1),
+  (3, 2),
+  (4, 2);
+
+CALL insert_visit('William Tatcher', 'Agumon', '2020-05-24');
+
+CALL insert_visit('Stephanie Mendez', 'Agumon', '2020-06-22');
+
+CALL insert_visit('William Tatcher', 'Agumon', '2020-05-24');
+
+CALL insert_visit('Jack Harkness', 'Gabumon', '2021-02-02');
+
+CALL insert_visit('Maisy Smith', 'Pikachu', '2020-01-05');
+
+CALL insert_visit('Maisy Smith', 'Pikachu', '2020-03-08');
+
+CALL insert_visit('Maisy Smith', 'Pikachu', '2020-05-14');
+
+CALL insert_visit('Stephanie Mendez', 'Devimon', '2021-05-04');
+
+CALL insert_visit('Jack Harkness', 'Charmander', '2021-02-24');
+
+CALL insert_visit('Maisy Smith', 'Plantmon', '2019-12-21');
+
+CALL insert_visit('William Tatcher', 'Plantmon', '2020-08-10');
+
+CALL insert_visit('Maisy Smith', 'Plantmon', '2021-04-07');
+
+CALL insert_visit('Stephanie Mendez', 'Squirtle', '2019-09-29');
+
+CALL insert_visit('Jack Harkness', 'Angemon', '2020-10-03');
+
+CALL insert_visit('Jack Harkness', 'Angemon', '2020-11-04');
+
+CALL insert_visit('Maisy Smith', 'Boarmon', '2019-01-24');
+
+CALL insert_visit('Maisy Smith', 'Boarmon', '2019-05-15');
+
+CALL insert_visit('Maisy Smith', 'Boarmon', '2020-02-27');
+
+CALL insert_visit('Maisy Smith', 'Boarmon', '2020-08-03');
+
+CALL insert_visit('Stephanie Mendez', 'Blossom', '2020-05-24');
+
+CALL insert_visit('William Tatcher', 'Blossom', '2021-01-11');
