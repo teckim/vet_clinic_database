@@ -5,12 +5,14 @@ CREATE TABLE medical_histories(
   status VARCHAR(20),
   PRIMARY KEY(id)
 );
+
 CREATE TABLE patients(
   id INT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR(20),
   date_of_birth DATE,
   PRIMARY KEY(id)
 );
+
 CREATE TABLE invoices(
   id INT GENERATED ALWAYS AS IDENTITY,
   total_amount DECIMAL,
